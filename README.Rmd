@@ -1,7 +1,22 @@
-# Welcome to MSCSShiny!
-Phil Ferriere  
-May 2016  
-
+---
+title: Welcome to MSCSShiny!
+author: "Phil Ferriere"
+date: "May 2016"
+geometry: margin=0cm
+output:
+  html_document:
+    self_contained: true
+    highlight: tango
+    keep_md: yes
+    theme: cerulean
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+---
+```{r echo=FALSE}
+library("knitr")
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
+```
 
 **MSCSShiny** is a test/demo application for R packages like `{mscsweblm4r}` that interface with the Microsoft Cognitive Services REST APIs.
 
