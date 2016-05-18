@@ -3,8 +3,6 @@ Welcome to MSCSShiny!
 
 **MSCSShiny** is a test/demo application for R packages like `{mscsweblm4r}` that interface with the Microsoft Cognitive Services REST APIs.
 
-A live demo of the application can be found at [https://philferriere.shinyapps.io/MSCSShiny](https://philferriere.shinyapps.io/MSCSShiny).
-
 ## Microsoft Cognitive Services? What's that about?
 
 [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/en-us/documentation)
@@ -27,31 +25,7 @@ To begin our exploration, we've created the `{mscsweblm4r}` R package that wraps
 * List of words (completions) most likely to follow a given sequence of words.
 * Word breaking of strings that contain no spaces.
 
-## The `{mscsweblm4r}` package
-
-For more information about the `{mscsweblm4r}` package, please visit the package's pages on [CRAN](https://cran.r-project.org/package=mscsweblm4r), or on [GitHub](https://github.com/philferriere/mscsweblm4r).
-
-## MSCSShiny Screenshots
-
-### Retrieve a list of supported web language models
-
-![](img/ListAvailableModels.png)
-
-### Get the words most likely to follow a sequence of words
-
-![](img/GenerateNextWords.png)
-
-### Break a string of concatenated words into individual words
-
-![](img/BreakIntoWords.png)
-
-### Calculate the conditional probability that a particular word will follow a given sequence of words
-
-![](img/ConditionalProbability.png)
-
-### Calculate the joint probability that a particular sequence of words will appear together
-
-![](img/JointProbability.png)
+For more information about the `{mscsweblm4r}` package (on [CRAN](https://cran.r-project.org/package=mscsweblm4r), or on [GitHub](https://github.com/philferriere/mscsweblm4r)), please check out the **Web Language Model API** tab at the top of this page.
 
 ## Credits
 
@@ -60,9 +34,3 @@ All Microsoft Cognitive Services components are Copyright © Microsoft.
 ## Meta
 
 Please report any issues or bugs [here](https://github.com/philferriere/mscsshiny/issues).
-
-License: MIT + [file](./LICENSE)
-
-This project is released with a [Contributor Code of Conduct](./CONDUCT.md). By
- participating in this project, you agree to abide by its terms.
-
