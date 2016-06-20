@@ -48,12 +48,14 @@ tabItemGenerateNextWords = tabItem(
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("Request URL: "),
+      tags$style(type='text/css', '#urlGenerateNextWords {font-size: small;}'),
       verbatimTextOutput("urlGenerateNextWords")
 
     ))),
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("JSON Response: "),
+      tags$style(type='text/css', '#jsonGenerateNextWords {font-size: small;}'),
       verbatimTextOutput("jsonGenerateNextWords")
 
     )))

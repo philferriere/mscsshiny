@@ -19,3 +19,4 @@ vignettes/*.pdf
 .httr-oauth
 
 *.json
+.Rproj.user

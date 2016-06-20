@@ -9,6 +9,11 @@ source("serverBreakIntoWords.R")
 source("serverCalculateConditionalProbability.R")
 source("serverCalculateJointProbability.R")
 
+source("serverSentiment.R")
+source("serverDetectTopics.R")
+source("serverDetectLanguages.R")
+source("serverKeyPhrases.R")
+
 shinyServer(function(input, output, session) {
 
   # ListAvailableModels tab code
@@ -26,4 +31,16 @@ shinyServer(function(input, output, session) {
   # CalculateJointProbability tab code
   serverCalculateJointProbability(input, output, session)
 
+  # Sentiment tab code
+  serverSentiment(input, output, session)
+
+  # DetectTopics tab code
+  serverDetectTopics(input, output, session)
+
+  # DetectLanguages tab code
+  serverDetectLanguages(input, output, session)
+   
+  # KeyPhrases tab code
+  serverKeyPhrases(input, output, session)
+  
 })

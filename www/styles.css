@@ -1,0 +1,76 @@
+/* Hide Shiny temporary errors */
+.shiny-output-error {
+  visibility: hidden;
+}
+.shiny-output-error:before {
+  visibility: hidden;
+}
+
+/* Customize bot style */
+.box-header .box-title {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Customize progress bar style, courtesy of Jack Olney
+   See http://jackolney.github.io/2016/shiny/ for details */
+.shiny-input-container input[type=file] {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.shiny-progress-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+.shiny-progress .progress {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 8px; /* This sets the height of the progress bar */
+  margin: 0;
+}
+
+.shiny-progress .bar {
+  background-color: orange; /* background-color: #FF0000; */
+  .opacity = 0.8;
+  transition-duration: 250ms;
+}
+
+.shiny-progress .progress-text {
+  position: absolute;
+  right: 30px;
+  height: 30px;
+  width: 490px;
+  background-color: orange; /* background-color: #D9534F; */
+  padding: 2px 3px 2px 3px;
+  opacity: 0.95;
+  /* The following rounds off the corners of the text box */
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.progress-text {
+  /* Copy the below to vertically center the progress bar text box in the shiny dashboard header */
+  /* !important is crucial here otherwise it gets overridden by the dreaded element.style */
+  top: 15px !important;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+/* Bold Initial part of message */
+.shiny-progress .progress-text .progress-message {
+  padding: 0 3px 3px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Message detail */
+.shiny-progress .progress-text .progress-detail {
+  padding: 0 3px 3px 3px;
+  font-size: 17px;
+}

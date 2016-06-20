@@ -15,6 +15,10 @@ tabItemDocumentation = tabItem(
         includeMarkdown("uiAppInstructions.md")
       ),
       tabPanel(
+        "Text Analytics API",
+        includeMarkdown("uiDocTextAnalyticsAPI.md")
+      ),
+      tabPanel(
         "Web Language Model API",
         includeMarkdown("uiDocWebLanguageModelAPI.md")
       )

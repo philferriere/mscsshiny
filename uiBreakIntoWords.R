@@ -48,12 +48,14 @@ tabItemBreakIntoWords = tabItem(
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("Request URL: "),
+      tags$style(type='text/css', '#urlBreakIntoWords {font-size: small;}'),
       verbatimTextOutput("urlBreakIntoWords")
 
     ))),
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("JSON Response: "),
+      tags$style(type='text/css', '#jsonBreakIntoWords {font-size: small;}'),
       verbatimTextOutput("jsonBreakIntoWords")
 
     )))

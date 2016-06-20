@@ -28,12 +28,14 @@ tabItemListAvailableModels = tabItem(
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("Request URL: "),
+      tags$style(type='text/css', '#urlListAvailableModels {font-size: small;}'),
       verbatimTextOutput("urlListAvailableModels")
 
     ))),
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("JSON Response: "),
+      tags$style(type='text/css', '#jsonListAvailableModels {font-size: small;}'),
       verbatimTextOutput("jsonListAvailableModels")
 
     )))

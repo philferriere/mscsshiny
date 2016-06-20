@@ -44,12 +44,14 @@ tabItemCalculateJointProbability = tabItem(
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("Request URL: "),
+      tags$style(type='text/css', '#urlCalculateJointProbability {font-size: small;}'),
       verbatimTextOutput("urlCalculateJointProbability")
 
     ))),
     fluidRow(column(width = 12, box(width = 12, status = "primary", align = "left",
 
       helpText("JSON Response: "),
+      tags$style(type='text/css', '#jsonCalculateJointProbability {font-size: small;}'),
       verbatimTextOutput("jsonCalculateJointProbability")
 
     )))

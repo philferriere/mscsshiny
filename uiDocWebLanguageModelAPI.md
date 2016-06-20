@@ -30,25 +30,19 @@ features to their apps. Those features include emotion and video detection;
 facial, speech and vision recognition; and speech and language understanding.
 
 The [Web Language Model REST API](https://www.microsoft.com/cognitive-services/en-us/web-language-model-api/documentation)
-provides tools for natural language processing [NLP](https://en.wikipedia.org/wiki/Natural_language_processing).
+provides tools for [NLP](https://en.wikipedia.org/wiki/Natural_language_processing).
 
 Per Microsoft's website, this API uses smoothed Backoff N-gram language models
 (supporting Markov order up to 5) that were trained on four web-scale American
 English corpora collected by Bing (web page body, title, anchor and query).
 
-The MSCS Web LM REST API supports four lookup operations:
+The MSCS Web LM REST API supports the following lookup operations:
 
-* Joint (log10) probability of a sequence of words.
-* Conditional (log10) probability of one word given a sequence of preceding words.
-* List of words (completions) most likely to follow a given sequence of words.
-* Word breaking of strings that contain no spaces.
-
-## Package Status
-
-This package is certainly functional. It's also the first time it is available
-on CRAN. Therefore, if you observe unexpected behaviors (a.k.a. bugs), please be
-kind enough to submit a bug report on GitHub (not via email) with a minimal
-reproducible example.
+* Calculate the joint probability that a sequence of words will appear together.
+* Compute the conditional probability that a specific word will follow an existing sequence of words..
+* Get the list of words (completions) most likely to follow a given sequence of words.
+* Insert spaces into a string of words adjoined together without any spaces (hashtags, URLs, etc.).
+* Retrieve the list of supported language models.
 
 ## Package Installation
 
@@ -61,7 +55,7 @@ if ("mscsweblm4r" %in% installed.packages()[,"Package"] == FALSE) {
 }
 ```
 
-Or, you can install the **development** version
+Or, you can install the **development** version:
 
 
 ```r
@@ -427,3 +421,8 @@ tryCatch({
 #> hello world wide  open      -2.97    
 #> -------------------------------------
 ```
+
+## Credits
+
+All Microsoft Cognitive Services components are Copyright (c) Microsoft.
+
