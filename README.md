@@ -5,6 +5,8 @@ June 2016
 
 **MSCSShiny** is a test/demo application for R packages like `{mscstexta4r}` and `{mscsweblm4r}` that interface with the Microsoft Cognitive Services REST APIs.
 
+> Demo: Try it live on [shinyapps.io](https://philferriere.shinyapps.io/MSCSShiny)!
+
 ## Microsoft Cognitive Services? What's that about?
 
 [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/en-us/documentation)
