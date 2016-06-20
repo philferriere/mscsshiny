@@ -25,6 +25,7 @@ for (dep in deps){
 
 # For some reason, can't publish .mscskeys.json to shinyapps.io but mscskeys.json works ok...
 Sys.setenv(MSCS_WEBLANGUAGEMODEL_CONFIG_FILE = "./data/mscskeys.json")
+Sys.setenv(MSCS_TEXTANALYTICS_CONFIG_FILE = "./data/mscskeys.json")
 # Configure mscsweblm4r and mscstexta4r
 weblmInit()
 textaInit()
