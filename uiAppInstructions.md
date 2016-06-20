@@ -8,7 +8,7 @@ Welcome to MSCSShiny!
 [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/en-us/documentation)
 -- formerly known as Project Oxford -- are a set of large, diverse, truly awesome APIs, SDKs and services that developers can use to add [AI](https://en.wikipedia.org/wiki/Artificial_intelligence) features to their apps. Those features include emotion and video detection; facial, speech and vision recognition; as well as speech and [NLP](https://en.wikipedia.org/wiki/Natural_language_processing).
 
-## MSCS > Language Services
+## MSCS Language Services
 
 Our interest, at this stage, is limited to the exploration and evaluation of the NLP features of MSCS:
 
@@ -16,7 +16,7 @@ Our interest, at this stage, is limited to the exploration and evaluation of the
 
 As should be clear from the above, this subset itself isn't exactly small...
 
-## Language Services > Text Analytics API
+## Text Analytics API
 
 The `{mscstexta4r}` package is a wrapper around the MSCS [Text Analytics REST API](https://www.microsoft.com/cognitive-services/en-us/text-analytics/documentation). This API offers a suite of text analytics web services - built with Azure Machine Learning - that can be used to analyze unstructured text. The API supports the following operations:
 
@@ -27,9 +27,9 @@ The `{mscstexta4r}` package is a wrapper around the MSCS [Text Analytics REST AP
 
 For more information about the `{mscstexta4r}` package (on [CRAN](https://cran.r-project.org/package=mscstexta4r), or on [GitHub](https://github.com/philferriere/mscstexta4r)), please check out the **Text Analytics API** tab at the top of this page.
 
-## Language Services > Web Language Model API
+## Web Language Model API
 
-TThe `{mscsweblm4r}` R package exposes bingdings for the MSCS [Web Language Model REST API](https://www.microsoft.com/cognitive-services/en-us/web-language-model-api/documentation). Per Microsoft's website, this API uses smoothed backoff N-gram language models (supporting Markov order up to 5) that were trained on four web-scale American English corpora collected by Bing (web page body, title, anchor and query). The following operations are supported:
+The `{mscsweblm4r}` R package exposes bindings for the MSCS [Web Language Model REST API](https://www.microsoft.com/cognitive-services/en-us/web-language-model-api/documentation). Per Microsoft's website, this API uses smoothed backoff N-gram language models (supporting Markov order up to 5) that were trained on four web-scale American English corpora collected by Bing (web page body, title, anchor and query). The following operations are supported:
 
 * Calculate the joint probability that a sequence of words will appear together.
 * Compute the conditional probability that a specific word will follow an existing sequence of words.

@@ -62,7 +62,7 @@ serverDetectTopics = function(input, output, session) {
         if (sleepTime > 0) {
           progress$set(
             value = as.integer(difftime(Sys.time(), originTime, units = "secs")),
-            message = "Topic detection in progress ",
+            message = "Operation in progress ",
             detail = sprintf(
                 "[Sleeping for %d s, timeout in %d s...]\n",
                 as.integer(as.difftime(sleepTime, units = "secs")),

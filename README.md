@@ -1,65 +1,95 @@
 # Welcome to MSCSShiny!
 Phil Ferriere  
-May 2016  
+June 2016  
 
 
-**MSCSShiny** is a test/demo application for R packages like `{mscsweblm4r}` that interface with the Microsoft Cognitive Services REST APIs.
+**MSCSShiny** is a test/demo application for R packages like `{mscstexta4r}` and `{mscsweblm4r}` that interface with the Microsoft Cognitive Services REST APIs.
 
 ## Microsoft Cognitive Services? What's that about?
 
 [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/en-us/documentation)
--- formerly known as Project Oxford -- are a set of large, diverse, truly awesome APIs, SDKs and services that developers can use to add [AI](https://en.wikipedia.org/wiki/Artificial_intelligence) features to their apps. Those features include emotion and video detection; facial, speech and vision recognition; and speech and language understanding.
+-- formerly known as Project Oxford -- are a set of large, diverse, truly awesome APIs, SDKs and services that developers can use to add [AI](https://en.wikipedia.org/wiki/Artificial_intelligence) features to their apps. Those features include emotion and video detection; facial, speech and vision recognition; as well as speech and [NLP](https://en.wikipedia.org/wiki/Natural_language_processing).
 
-## MSCS > Language Services
+## MSCS Language Services
 
-Our interest, at this stage, is limited to the exploration and evaluation of the Natural Language Processing (NLP) features of MSCS:
+Our interest, at this stage, is limited to the exploration and evaluation of the NLP features of MSCS:
 
 [![https://www.microsoft.com/cognitive-services/en-us/documentation](img/MSCSEcosystem.png)](https://www.microsoft.com/cognitive-services/en-us/documentation)
 
-As should be clear from the above, the NLP subset itself isn't exactly small...
+As should be clear from the above, this subset itself isn't exactly small...
 
-## Language Services > Web Language Model API
+## Text Analytics API
 
-To begin our exploration, we've created the `{mscsweblm4r}` R package that wraps the Web Language Model REST API. Per Microsoft's website, this API uses smoothed backoff N-gram language models (supporting Markov order up to 5) that were trained on four web-scale American English corpora collected by Bing (web page body, title, anchor and query). The MSCS Web LM REST API supports four lookup operations:
+The `{mscstexta4r}` package is a wrapper around the MSCS [Text Analytics REST API](https://www.microsoft.com/cognitive-services/en-us/text-analytics/documentation). This API offers a suite of text analytics web services - built with Azure Machine Learning - that can be used to analyze unstructured text. The API supports the following operations:
 
-* Joint (log10) probability of a sequence of words.
-* Conditional (log10) probability of one word given a sequence of preceding words.
-* List of words (completions) most likely to follow a given sequence of words.
-* Word breaking of strings that contain no spaces.
+* Sentiment analysis - Is a sentence or document generally positive or negative?
+* Topic detection - What's being discussed across a list of documents/reviews/articles?
+* Language detection - What language is a document written in?
+* Key talking points extraction - What's being discussed in a single document?
 
-## The `{mscsweblm4r}` package
+For more information about the `{mscstexta4r}` package (on [CRAN](https://cran.r-project.org/package=mscstexta4r), or on [GitHub](https://github.com/philferriere/mscstexta4r)), please check out the **Text Analytics API** tab at the top of this page.
 
-For more information about the `{mscsweblm4r}` package, please visit the package's pages on [CRAN](https://cran.r-project.org/package=mscsweblm4r), or on [GitHub](https://github.com/philferriere/mscsweblm4r).
+## Web Language Model API
 
-## MSCSShiny Screenshots
+The `{mscsweblm4r}` R package exposes bindings for the MSCS [Web Language Model REST API](https://www.microsoft.com/cognitive-services/en-us/web-language-model-api/documentation). Per Microsoft's website, this API uses smoothed backoff N-gram language models (supporting Markov order up to 5) that were trained on four web-scale American English corpora collected by Bing (web page body, title, anchor and query). The following operations are supported:
 
-### Retrieve a list of supported web language models
+* Calculate the joint probability that a sequence of words will appear together.
+* Compute the conditional probability that a specific word will follow an existing sequence of words.
+* Get the list of words (completions) most likely to follow a given sequence of words.
+* Insert spaces into a string of words adjoined together without any spaces (hashtags, URLs, etc.).
+* Retrieve the list of supported language models.
+
+For additional information on the `{mscsweblm4r}` package (on [CRAN](https://cran.r-project.org/package=mscsweblm4r), or on [GitHub](https://github.com/philferriere/mscsweblm4r)), please click the **Web Language Model API** tab at the top of this page.
+
+## Text Analytics Screenshots
+
+### Sentiment analysis
+
+![](img/SentimentAnalysis.png)
+
+### Topic detection
+
+![](img/TopicDetection.png)
+
+### Language detection
+
+![](img/LanguageDetection.png)
+
+### Key talking points extraction
+
+![](img/KeyPhrases.png)
+
+## Web Language Model Screenshots
+
+### Supported web language models
 
 ![](img/ListAvailableModels.png)
 
-### Get the words most likely to follow a sequence of words
+### Words most likely to follow a sequence of words
 
 ![](img/GenerateNextWords.png)
 
-### Break a string of concatenated words into individual words
+### Break concatenated words into individual words
 
 ![](img/BreakIntoWords.png)
 
-### Calculate the conditional probability that a particular word will follow a given sequence of words
+### Conditional probability that a particular word follows a given sequence of words
 
 ![](img/ConditionalProbability.png)
 
-### Calculate the joint probability that a particular sequence of words will appear together
+### Joint probability that a particular sequence of words appears together
 
 ![](img/JointProbability.png)
 
 ## Credits
 
-All Microsoft Cognitive Services components are Copyright © Microsoft.
+All Microsoft Cognitive Services components are Copyright (c) Microsoft.
+
+Customized progress bar style, courtesy of [\@jackolney](https://github.com/jackolney).
 
 ## Meta
 
-Please report any issues or bugs [here](https://github.com/philferriere/mscsshiny/issues).
+Please report any MSCSShiny issues or bugs [here](https://github.com/philferriere/mscsshiny/issues).
 
 License: MIT + [file](./LICENSE)
 
